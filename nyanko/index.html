@@ -2,6 +2,23 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1068202457"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-1068202457');
+  // LINE登録ボタンのクリックをコンバージョンとして送信してから遷移する
+  function gtag_report_conversion(url) {
+    var done = false;
+    var go = function () { if (!done) { done = true; window.location = url; } };
+    gtag('event', 'conversion', { 'send_to': 'AW-1068202457/Ra4CCIXGsJQdENnzrf0D', 'event_callback': go });
+    setTimeout(go, 800);
+    return false;
+  }
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>にゃんコーチング 今日の1枚</title>
 <meta name="description" content="公認心理師がつくったセルフカウンセリングカード「にゃんコーチング」。LINEに登録すると、今日の1枚・7分の解説動画・書き込みワークシートの3点をプレゼントします。">
@@ -120,7 +137,7 @@
 
 <div class="wrap">
   <div class="cta">
-    <a class="btn" href="https://line.michi-hq-api.com/r/gads-nyanko">
+    <a class="btn" href="https://line.michi-hq-api.com/r/gads-nyanko" onclick="return gtag_report_conversion(this.href);">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.63 2 11.1c0 4 3.56 7.36 8.37 8 .33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .87.55 1.07-.45 5.78-3.4 7.89-5.83C21.36 14.5 22 12.88 22 11.1 22 6.63 17.52 3 12 3z"/></svg>
       LINEで今日の1枚を受け取る
     </a>
@@ -180,7 +197,7 @@
 
 <div class="wrap">
   <div class="cta">
-    <a class="btn" href="https://line.michi-hq-api.com/r/gads-nyanko">
+    <a class="btn" href="https://line.michi-hq-api.com/r/gads-nyanko" onclick="return gtag_report_conversion(this.href);">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.63 2 11.1c0 4 3.56 7.36 8.37 8 .33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .87.55 1.07-.45 5.78-3.4 7.89-5.83C21.36 14.5 22 12.88 22 11.1 22 6.63 17.52 3 12 3z"/></svg>
       LINEで今日の1枚を受け取る
     </a>
